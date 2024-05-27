@@ -1,28 +1,36 @@
 // DEPENDENCIES
-const express = require('express')
-const mongoose = require('mongoose')
+const express = require('express');
+const mongoose = require('mongoose');
 
 // CONFIGURATION
-require('dotenv').config()
-const PORT = process.env.PORT
-const app = express()
-mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
-    () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
-)
+require('dotenv').config();
+const PORT = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
+
+// Create express app
+const app = express();
+
+// Connect to MongoDB using Promises
+mongoose.connect(MONGO_URI)
+    .then(() => {
+        console.log('Connected to MongoDB:', MONGO_URI);
+        // Start the server after successful connection
+        app.listen(PORT, () => {
+            console.log('Server is running on port:', PORT);
+        });
+    })
+    .catch((error) => {
+        console.error('Error connecting to MongoDB:', error);
+    });
 
 // MIDDLEWARE
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }));
 
 // ROUTES
 app.get('/', (req, res) => {
-  res.send('Welcome to the Big Books! API')
-})
-
-// LISTEN
-app.listen(PORT, () => {
-  console.log('Greetings! From port: ', PORT);
-})
+    res.send('Welcome to the Big Books! API');
+});
 
 // REQUIRE CONTROLLERS
-const booksController = require('./controllers/books-controller')
-app.use('/books', booksController)
+const booksController = require('./controllers/books-controller');
+app.use('/books', booksController);
