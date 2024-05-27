@@ -32,5 +32,5 @@ app.get('/', (req, res) => {
 });
 
 // REQUIRE CONTROLLERS
-const booksController = require('./controllers/books-controller');
+const booksController = require('./controllers/books_controller');
 app.use('/books', booksController);
