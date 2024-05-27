@@ -1,10 +1,10 @@
 // DEPENDENCIES
 const mongoose = require('mongoose')
-const { Schema } = mongoose 
+const { Schema } = mongoose
 
 //SCHEMA
 const bookSchema = new Schema({
-    "id": Number,
+    "id": { type: Number, require: true },
     "title": String,
     "description": String,
     "year": Number,
