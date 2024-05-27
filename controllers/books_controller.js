@@ -31,7 +31,7 @@ books.get('/:id', (req, res) => {
         });
 })
 
-// CREATE/POST a new book
+// CREATE/POST a new book 
 books.post('/', (req, res) => {
     const newBook = new Books(req.body)
     newBook.save()
@@ -46,10 +46,12 @@ books.post('/', (req, res) => {
 
 // PUT/update a book by ID
 books.put('/:id', (req, res) => {
-    books.findOneAndUpdate({ id: req.id.params.id }, req.body, { new: true })
-        .then(updateBooks => {
-            if (updateBooks) {
-                res.json(foundBooks);
+    const id = req.params.id; // Corrected line
+
+    Books.findOneAndUpdate({ _id: id }, req.body, { new: true })
+        .then(updatedBook => {
+            if (updatedBook) {
+                res.json(updatedBook);
             } else {
                 res.status(404).json({ error: 'Book not found' });
             }
@@ -58,11 +60,14 @@ books.put('/:id', (req, res) => {
             console.error('Error updating book:', error);
             res.status(500).json({ error: 'Failed to update book' });
         });
-})
+});
 
-// DELETE a book by ID
+
+//! DELETE a book by ID
 books.delete('/:id', (req, res) => {
-    Books.findOneAndDelete({ id: req.params.id })
+    const id = req.params.id; // Corrected line
+    
+    Books.findOneAndDelete({ _id: id})
         .then(deleteBook => {
             if (deleteBook) {
                 res.json({ message: 'Successfully deleted' });

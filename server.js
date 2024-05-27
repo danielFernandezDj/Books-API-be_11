@@ -23,6 +23,8 @@ mongoose.connect(MONGO_URI)
         console.error('Error connecting to MongoDB:', error);
     });
 
+// MIDDLEWARE
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     res.send('Welcome to the Big Books! API');
