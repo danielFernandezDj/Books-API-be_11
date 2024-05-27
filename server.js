@@ -1,9 +1,9 @@
 // DEPENDENCIES
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require('express')
+const mongoose = require('mongoose')
+require('dotenv').config()
 
 // CONFIGURATION
-require('dotenv').config();
 const PORT = process.env.PORT;
 const MONGO_URI = process.env.MONGO_URI;
 
@@ -23,10 +23,7 @@ mongoose.connect(MONGO_URI)
         console.error('Error connecting to MongoDB:', error);
     });
 
-// MIDDLEWARE
 app.use(express.urlencoded({ extended: true }));
-
-// ROUTES
 app.get('/', (req, res) => {
     res.send('Welcome to the Big Books! API');
 });
