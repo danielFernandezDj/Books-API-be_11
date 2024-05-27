@@ -3,7 +3,7 @@ const express = require('express');
 const books = express.Router();
 const Books = require('../models/books');
 
-// GET all books 
+// INDEX/GET all books 
 books.get('/', (req, res) => {
     Books.find()
         .then(foundBooks => {
@@ -15,7 +15,7 @@ books.get('/', (req, res) => {
         });
 });
 
-// GET a single book by ID
+// SHOW/GET a single book by ID
 books.get('/:id', (req, res) => {
     Books.findById(req.params.id)
         .then(foundBooks => {
@@ -31,7 +31,7 @@ books.get('/:id', (req, res) => {
         });
 })
 
-// POST a new book
+// CREATE/POST a new book
 books.post('/', (req, res) => {
     const newBook = new Books(req.body)
     newBook.save()
