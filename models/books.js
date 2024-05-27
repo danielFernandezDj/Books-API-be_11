@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const { Schema } = mongoose
 
 //SCHEMA
-const booksSchema = new Schema({
+const bookSchema = new Schema({
     "id": 1,
     "title": "The Shinobi Initiative",
     "description": "The reality-bending adventures of a clandestine service agency in the year 2166",
@@ -12,3 +12,6 @@ const booksSchema = new Schema({
     "imageURL": "/assets/shinobi-initiative.jpeg"
 }
 )
+
+const Books = mongoose.model('Books', bookSchema)
+module.export = Books
