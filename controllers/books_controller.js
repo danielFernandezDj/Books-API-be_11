@@ -3,6 +3,7 @@ const express = require('express');
 const books = express.Router();
 const Books = require('../models/books');
 
+// Seeds db
 books.get('/seed', (req, res) => {
     Books.insertMany([{
         "title": "The Shinobi Initiative",
@@ -40,7 +41,7 @@ books.get('/seed', (req, res) => {
         }))
 })
 
-// GET all books
+// GET all books //! Is it load only one seed, and I don't know why!
 books.get('/', (req, res) => {
     Books.find()
         .then(foundBooks => {
