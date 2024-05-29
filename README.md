@@ -13,7 +13,7 @@
 ### • cors: https://www.npmjs.com/package/cors
 ### • nodemon: https://www.npmjs.com/package/nodemon
 ##
-### • also I use 'Postman' to make request and test the API.
+### Also I use 'Postman' to make request and test the API.
 ###  Postman: https://www.postman.com/downloads/
 -------------
 ## How to start.
@@ -23,7 +23,7 @@
 ###
 ### 3• Create a '.env' file at the folder level of'Books-API-be_11', so the main folder, 
 ### because there is were we should be put our Routs, example: 4000.
-
+-------------
 ## Extra recourses:
 ### • HTTP Cats: https://http.cat/
 ### • HTTP response status codes: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#information_responses
