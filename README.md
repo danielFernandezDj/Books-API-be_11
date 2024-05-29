@@ -23,7 +23,7 @@
 ### 3• Create a '.env' file at the folder level of'Books-API-be_11', so the main folder, 
 ### because that is where we should be put our Routs, example: 4000.
 ## 
-### 4• Use that rout to add some books to you db, replace '4000' has you need!
+### 4• Use this link to add some books to you db, replace '4000' has you need!
 http://localhost:4000/books/seed
 -------------
 ## Extra recourses:
