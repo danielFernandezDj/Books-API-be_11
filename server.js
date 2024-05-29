@@ -1,4 +1,5 @@
 // DEPENDENCIES
+const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 require('dotenv').config()
@@ -9,6 +10,7 @@ const MONGO_URI = process.env.MONGO_URI;
 
 // Create express app
 const app = express();
+app.use(cors())
 
 // Connect to MongoDB using Promises
 mongoose.connect(MONGO_URI)
@@ -26,8 +28,10 @@ mongoose.connect(MONGO_URI)
 // MIDDLEWARE
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 app.get('/', (req, res) => {
     res.send('Welcome to the Big Books! API');
+    res.json({ msg: 'This is CORS-enabled for all origins!' })
 });
 
 // REQUIRE CONTROLLERS
