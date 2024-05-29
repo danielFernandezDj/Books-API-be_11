@@ -21,7 +21,7 @@
 ### 2• Then in the terminal 'npm install' to install all the dependencies, like 'express'.
 ###
 ### 3• Create a '.env' file at the folder level of'Books-API-be_11', so the main folder, 
-### because there is were we should be put our Routs, example: 4000.
+### because that is were we should be put our Routs, example: 4000.
 -------------
 ## Extra recourses:
 ### • HTTP Cats: https://http.cat/
