@@ -3,11 +3,10 @@
 ## About:
 ### "Book-API" is a simple api where you can do request, example get and put.
 
-## Creator:
-### • Daniel
+## Creator: Daniel
+
 -------------
-## Technologies Used:
-#### • all this with 'npm'
+## Technologies Used: #### • all this with 'npm'
 ### • JavaScript: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps
 ### • Express {}
 ### • Json 
@@ -17,7 +16,7 @@
 ##
 ### • also I use 'Postman' to make request and test the api.
 ### - Postman: https://www.postman.com/downloads/
-
+-------------
 ## How to start.
 ### 1• First we need to install 'npm' at the terminal.
 ### - npm init -y
