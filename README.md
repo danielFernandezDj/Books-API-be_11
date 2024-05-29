@@ -2,10 +2,9 @@
 ### "Book-API" is a simple api where you can do request, example get and put.
 
 ## Creator:
-### • Daniel
+### • Daniel Fernandez
 -------------
 ## Technologies Used:
-#### All this with 'npm'...
 ### • JavaScript: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps
 ### • Express: https://expressjs.com/en/starter/hello-world.html
 ### • nodeJS: https://nodejs.org/en
