@@ -1,13 +1,11 @@
 # Books-API-be_11
-
-## About:
 ### "Book-API" is a simple api where you can do request, example get and put.
 
 ## Creator:
 ### • Daniel
 -------------
 ## Technologies Used:
-#### • all this with 'npm'
+#### All this with 'npm'...
 ### • JavaScript: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps
 ### • Express: https://expressjs.com/en/starter/hello-world.html
 ### • nodeJS: https://nodejs.org/en
@@ -15,17 +13,16 @@
 ### • cors: https://www.npmjs.com/package/cors
 ### • nodemon: https://www.npmjs.com/package/nodemon
 ##
-### • also I use 'Postman' to make request and test the api.
+### • also I use 'Postman' to make request and test the API.
 ###  Postman: https://www.postman.com/downloads/
 -------------
 ## How to start.
-### 1• First we need to install 'npm' at the terminal.
-### - npm init -y
+### 1• First we need to install 'npm' at the terminal 'npm init -y'
 ###
 ### 2• Then in the terminal 'npm install' to install all the dependencies, like 'express'.
 ###
-### 3• Create a '.env' file at the folder level of'../Books-API-be_11', so the main folder, 
-### to add the Rout, example: 4000
+### 3• Create a '.env' file at the folder level of'Books-API-be_11', so the main folder, 
+### because there is were we should be put our Routs, example: 4000.
 
 ## Extra recourses:
 ### • HTTP Cats: https://http.cat/
