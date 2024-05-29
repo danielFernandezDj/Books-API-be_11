@@ -1,5 +1,5 @@
 # Books-API-be_11
-### "Book-API" is a simple api where you can do request, example get and put.
+### "Book-API" is a simple API where you can do request to our small server, example (get) and (put).
 
 ## Creator:
 ### • Daniel Fernandez
